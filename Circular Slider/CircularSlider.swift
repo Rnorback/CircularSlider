@@ -75,12 +75,6 @@ class CircularSlider: UIControl {
     
     override func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
         
-//        for subview in subviews as [UIView] {
-//            if !subview.hidden && subview.alpha > 0 && subview.userInteractionEnabled && subview.pointInside(convertPoint(point, toView: subview), withEvent: event) {
-//                return true
-//            }
-//        }
-        
         // Allow any touch points that are not inside the slider handle to pass through to the next view
         if Square(point.x - handleCenter.x) + Square(point.y - handleCenter.y) < Square(handleRadius) {
             return true
